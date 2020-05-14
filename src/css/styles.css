@@ -2,7 +2,7 @@
 /*
 Blau :        #1F4E8C
 Dunkelgrau :  #3D3F45
-Hellgrau :    #E5E5E5
+Hellgrau :    #F0F0F0
 Rot :         #A62C21
 
  */
@@ -20,7 +20,7 @@ body {
 
 :focus {
     outline: none;
-    box-shadow: 0 0 2px 2px #E5E5E5, 0 0 10px #E5E5E5;
+    box-shadow: 0 0 2px 2px #F0F0F0, 0 0 10px #F0F0F0;
 }
 
 section {
@@ -192,12 +192,12 @@ section {
 }
 
 #header-nav ul > li > a:hover {
-  color: #E5E5E5;
+  color: #F0F0F0;
   text-decoration: none;
 }
 
 #header-nav ul > li > a:active {
-  color: #E5E5E5;
+  color: #F0F0F0;
   text-decoration: none;
 }
 
@@ -456,6 +456,108 @@ section {
 
   #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-box {
     margin-right: 0;
+  }
+
+}
+
+/* === Video-Bereich === */
+#video-bereich {
+  background-color: #3D3F45;
+  color: #FFF;
+}
+
+#video-bereich video {
+  width: 35%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-width: 1440px) {
+  #video-bereich video {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #video-bereich video {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  #video-bereich video {
+    width: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  #video-bereich video {
+    width: 100%;
+  }
+}
+
+/* === Service-Bereich === */
+#service-bereich {
+  background-color: #F0F0F0;
+}
+
+.service-box {
+  text-align: center;
+  width: 80%;
+}
+
+.service-box h1 {
+  font-size: 1.4rem;
+}
+
+#service-bereich .row:nth-of-type(2)>.col-2:first-of-type>.service-box {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+#service-bereich .row:nth-of-type(2)>.col-2:nth-of-type(2)>.service-box {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.service-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#guenstig-icon {
+    background: #3D3F45 url("./../img/services-sprite.png") left 0 top 0;
+}
+
+#schnell-icon {
+  background: #3D3F45 url("./../img/services-sprite.png") left -120px top 0;
+
+}
+
+#modern-icon {
+  background: #3D3F45 url("./../img/services-sprite.png") left -240px top 0;
+
+}
+
+@media (max-width: 768px) {
+
+  #service-bereich > .container > .row:nth-of-type(2) > .col-2 > .service-box {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+
+  .service-box {
+    width: 100%;
   }
 
 }
