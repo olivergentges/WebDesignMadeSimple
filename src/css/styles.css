@@ -368,7 +368,7 @@ section {
 }
 
 /* === Leistungen-Bereich === */
-.leistungs-box {
+.leistungs-teaser-box {
   background-color: #3D3F45;
   text-align: center;
   color: #FFF;
@@ -378,7 +378,7 @@ section {
 }
 
 
-.leistungs-box > h2 {
+.leistungs-teaser-box > h2 {
   font-size: 1.4rem;
 }
 
@@ -413,19 +413,19 @@ section {
 
 
 
-#leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-box {
+#leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
   margin-right: auto;
   margin-left: 1rem;
 }
 
-#leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-box {
+#leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
   margin-right: 1rem;
   margin-left: auto;
 }
 
 @media (max-width: 1366px) {
 
-  .leistungs-box {
+  .leistungs-teaser-box {
     width: 80%;
   }
 
@@ -433,16 +433,16 @@ section {
 
 @media (max-width: 1024px) {
 
-  .leistungs-box {
+  .leistungs-teaser-box {
     width: 100%;
     margin-bottom: .6rem;
   }
 
-  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-box {
+  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
     margin-left: .5rem;
   }
 
-  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-box {
+  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
     margin-right: .5rem;
   }
 
@@ -450,11 +450,11 @@ section {
 
 @media (max-width: 768px) {
 
-  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-box {
+  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
     margin-left: 0;
   }
 
-  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-box {
+  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
     margin-right: 0;
   }
 
@@ -617,6 +617,116 @@ section {
     display: none;
   }
 
+}
+
+/* === Footer-Bereich ==== */
+#footer {
+  background-color: #3D3F45;
+  height: 2.8rem;
+  color : #FFF;
+}
+
+#footer-nav {
+  display: inline-block;
+  float: right;
+}
+
+#footer-nav a {
+  text-decoration: none;
+}
+
+#footer-nav a:link {
+  color: #FFF;
+}
+
+#footer-nav a:visited {
+  color: #FFF;
+
+}
+
+#footer-nav a:active {
+  color: #FFF;
+
+}
+#footer-nav a:hover {
+  color: #F0F0F0;
+
+}
+
+@media (max-width: 565px) {
+
+  #footer span {
+    display: none
+  }
+
+  #footer-nav {
+    float: none;
+    display: block;
+  }
+
+  #footer-nav a {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+/* === Leistungen-Seite === */
+.flex-container {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leistungs-box {
+  background-color: #3D3F45;
+  flex-basis: 25%;
+  color: #FFF;
+  padding: 2rem 4rem;
+  text-align: center;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leistungs-box h1 {
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+}
+
+
+.leistungs-box-empfohlen {
+  flex-basis: 27.5%;
+  min-height: 700px;
+  box-shadow: 0 0 20px 0 #3D3F45;
+  font-size: 1.05rem;
+}
+
+.leistungs-box ul {
+  padding: 0;
+
+}
+
+.leistungs-box ul > li {
+  list-style-position: inside;
+  margin-bottom: .5rem;
+}
+
+.leistung-auswählen-btn {
+  width: 50%;
+  height: 2.5rem;
+  font-size: 1rem;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.leistung-auswählen-btn:hover {
+  font-weight: normal;
 }
 
 /*
