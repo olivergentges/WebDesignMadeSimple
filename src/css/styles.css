@@ -73,10 +73,10 @@ section {
   border: 2px solid #A62C21;
   color: #FFF;
   padding: .4rem .6rem;
+  transition: border .5s ease-in-out;
 }
 
 .btn-typ-1:hover {
-  background-color: #A62C21;
   border: 2px solid #FFF;
 }
 
@@ -85,13 +85,25 @@ section {
   background-color: transparent;
   color: #FFF;
   padding: .4rem .6rem;
+  transition: color .5s ease-in-out, border .5s ease-in-out;
 }
 
 .btn-typ-2:hover {
   color: #A62C21;
-  font-weight: bold;
   border: 2px solid  #A62C21;
 
+}
+
+.btn-typ-3 {
+  border: 2px solid #3D3F45;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #3D3F45;
+  transition: border .5s ease-in-out;
+}
+
+.btn-typ-3:hover {
+  border: 2px solid #A62C21;
 }
 
 .intro-container {
@@ -99,7 +111,7 @@ section {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.0rem;
 }
 
 @media (max-width: 1366px) {
@@ -114,9 +126,11 @@ section {
 
   .intro-container {
     width: 100%;
+    margin-bottom: 1rem;
   }
 
 }
+
 
 .intro-container > h1 {
   font-size: 1.6rem;
@@ -367,7 +381,53 @@ section {
   }
 }
 
+/* === Animiertes Logo === */
+@keyframes logoAnimation {
+  0% {transform: rotateZ(0deg);}
+  11.111% {transform: rotateZ(0deg);}
+  22.222% {transform: rotateZ(90deg);}
+  33.333% {transform: rotateZ(90deg);}
+  44.444% {transform: rotateZ(180deg);}
+  55.555% {transform: rotateZ(180deg);}
+  66.666% {transform: rotateZ(270deg);}
+  77.777% {transform: rotateZ(270deg);}
+  88.888% {transform: rotateZ(360deg);}
+  100% {transform: rotateZ(360deg);}
+
+}
+
+#animiertes-logo {
+  height: 150px;
+  width: 150px;
+  background-color: #3D3F45;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding: 25px;
+}
+
+#animiertes-logo > img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: logoAnimation 5s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+  #animiertes-logo {
+    display: none;
+  }
+
+}
+
 /* === Leistungen-Bereich === */
+#leistungen-bereich {
+  padding-top: 1rem;
+}
+
 .leistungs-teaser-box {
   background-color: #3D3F45;
   text-align: center;
@@ -377,6 +437,12 @@ section {
   margin-bottom: 1.6rem;
 }
 
+@media (max-width:480px) {
+  .leistungs-teaser-box {
+    padding: 1rem 1.5rem 2.5rem;
+  }
+
+}
 
 .leistungs-teaser-box > h2 {
   font-size: 1.4rem;
@@ -406,7 +472,6 @@ section {
 
 .leistungen-ansehen-btn:hover {
   color: #A62C21;
-  font-weight: bold;
   border: 2px solid  #A62C21;
 
 }
@@ -527,9 +592,13 @@ section {
   height: 120px;
   border-radius: 50%;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: automatisch;
+  transition: transform 1s;
 }
 
+.service-icon:hover {
+  transform: rotateZ(360deg);
+}
 #guenstig-icon {
     background: #3D3F45 url("./../img/services-sprite.png") left 0 top 0;
 }
@@ -572,6 +641,10 @@ section {
   width: 85%;
   margin-right: auto;
   margin-left: auto;
+}
+
+#über-uns-container p {
+  margin-top: 0;
 }
 
 #über-uns-container > img {
@@ -838,6 +911,9 @@ section {
 
 
 /* === Kontakt-Seite */
+#kontakt-bereich {
+ padding-top: 1rem;
+}
 
 #kontakt-formular input,
 #kontakt-formular textarea {
@@ -847,16 +923,14 @@ section {
   font-size: 1rem;
   font-family: 'Raleway', 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
   color: #3D3F45;
-
+ transition: border .5s ease-in-out;
 }
 
-.btn-typ-3 {
-  border: 2px solid #3D3F45;
-  background-color: transparent;
-  font-size: 1rem;
-  color: #3D3F45;
+
+#absendenButton {
   width: 150px;
   height: 39px;
+
 }
 
 #kontakt-formular textarea {
@@ -864,10 +938,7 @@ section {
 }
 
 #kontakt-formular input:hover,
-#kontakt-formular input:focus,
-#kontakt-formular textarea:hover,
-#kontakt-formular textarea:focus,
-#kontakt-formular button:hover {
+#kontakt-formular textarea:hover {
   border: 2px solid #A62C21;
 }
 
@@ -901,6 +972,10 @@ section {
 }
 
 /* === Impressum === */
+#impressum {
+  padding-top: 1rem;
+}
+
 #impressum a {
   color: #3D3F45;
   text-decoration: none;
